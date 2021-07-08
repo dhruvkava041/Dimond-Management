@@ -1,0 +1,343 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0B1DA4B-54F4-4E2D-B407-EC3035563F0D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SGP_1._0</RootNamespace>
+    <AssemblyName>SGP_1.0</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44369</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUS.html" />
+    <Content Include="AdminControls.aspx" />
+    <Content Include="day-book.html" />
+    <Content Include="FE\dist\css\adminlte.css" />
+    <Content Include="FE\dist\css\adminlte.css.map" />
+    <Content Include="FE\dist\css\adminlte.min.css" />
+    <Content Include="FE\dist\css\adminlte.min.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.components.css" />
+    <Content Include="FE\dist\css\alt\adminlte.components.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.components.min.css" />
+    <Content Include="FE\dist\css\alt\adminlte.components.min.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.core.css" />
+    <Content Include="FE\dist\css\alt\adminlte.core.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.core.min.css" />
+    <Content Include="FE\dist\css\alt\adminlte.core.min.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.extra-components.css" />
+    <Content Include="FE\dist\css\alt\adminlte.extra-components.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.extra-components.min.css" />
+    <Content Include="FE\dist\css\alt\adminlte.extra-components.min.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.pages.css" />
+    <Content Include="FE\dist\css\alt\adminlte.pages.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.pages.min.css" />
+    <Content Include="FE\dist\css\alt\adminlte.pages.min.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.plugins.css" />
+    <Content Include="FE\dist\css\alt\adminlte.plugins.css.map" />
+    <Content Include="FE\dist\css\alt\adminlte.plugins.min.css" />
+    <Content Include="FE\dist\css\alt\adminlte.plugins.min.css.map" />
+    <Content Include="FE\dist\img\AdminLTELogo.png" />
+    <Content Include="FE\dist\img\avatar.png" />
+    <Content Include="FE\dist\img\avatar04.png" />
+    <Content Include="FE\dist\img\avatar2.png" />
+    <Content Include="FE\dist\img\avatar3.png" />
+    <Content Include="FE\dist\img\avatar5.png" />
+    <Content Include="FE\dist\img\boxed-bg.jpg" />
+    <Content Include="FE\dist\img\boxed-bg.png" />
+    <Content Include="FE\dist\img\credit\american-express.png" />
+    <Content Include="FE\dist\img\credit\cirrus.png" />
+    <Content Include="FE\dist\img\credit\mastercard.png" />
+    <Content Include="FE\dist\img\credit\mestro.png" />
+    <Content Include="FE\dist\img\credit\paypal.png" />
+    <Content Include="FE\dist\img\credit\paypal2.png" />
+    <Content Include="FE\dist\img\credit\visa.png" />
+    <Content Include="FE\dist\img\default-150x150.png" />
+    <Content Include="FE\dist\img\icons.png" />
+    <Content Include="FE\dist\img\photo1.png" />
+    <Content Include="FE\dist\img\photo2.png" />
+    <Content Include="FE\dist\img\photo3.jpg" />
+    <Content Include="FE\dist\img\photo4.jpg" />
+    <Content Include="FE\dist\img\prod-1.jpg" />
+    <Content Include="FE\dist\img\prod-2.jpg" />
+    <Content Include="FE\dist\img\prod-3.jpg" />
+    <Content Include="FE\dist\img\prod-4.jpg" />
+    <Content Include="FE\dist\img\prod-5.jpg" />
+    <Content Include="FE\dist\img\user1-128x128.jpg" />
+    <Content Include="FE\dist\img\user2-160x160.jpg" />
+    <Content Include="FE\dist\img\user3-128x128.jpg" />
+    <Content Include="FE\dist\img\user4-128x128.jpg" />
+    <Content Include="FE\dist\img\user5-128x128.jpg" />
+    <Content Include="FE\dist\img\user6-128x128.jpg" />
+    <Content Include="FE\dist\img\user7-128x128.jpg" />
+    <Content Include="FE\dist\img\user8-128x128.jpg" />
+    <Content Include="FE\dist\js\adminlte.js" />
+    <Content Include="FE\dist\js\adminlte.js.map" />
+    <Content Include="FE\dist\js\adminlte.min.js" />
+    <Content Include="FE\dist\js\adminlte.min.js.map" />
+    <Content Include="FE\dist\js\demo.js" />
+    <Content Include="FE\dist\js\pages\dashboard.js" />
+    <Content Include="FE\dist\js\pages\dashboard2.js" />
+    <Content Include="FE\dist\js\pages\dashboard3.js" />
+    <Content Include="FE\plugins\bootstrap-duallistbox.min.css" />
+    <Content Include="FE\plugins\Bootstrap\bootstrap-duallistbox.min.css" />
+    <Content Include="FE\plugins\Bootstrap\bootstrap.bundle.min.js" />
+    <Content Include="FE\plugins\Bootstrap\icheck-bootstrap.min.css" />
+    <Content Include="FE\plugins\Bootstrap\jquery.bootstrap-duallistbox.min.js" />
+    <Content Include="FE\plugins\Bootstrap\tempusd.css" />
+    <Content Include="FE\plugins\Bootstrap\tempusdominus-bootstrap-4.min.js" />
+    <Content Include="FE\plugins\bs-custom-file-input\bs-custom-file-input.min.js" />
+    <Content Include="FE\plugins\chart\Chart.min.css" />
+    <Content Include="FE\plugins\datatables-responsive\dataTables.responsive.min.js" />
+    <Content Include="FE\plugins\datatables-responsive\responsive.bootstrap4.min.js" />
+    <Content Include="FE\plugins\datatables\dataTables.bootstrap4.min.js" />
+    <Content Include="FE\plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="FE\plugins\daterangepicker\daterangepicker.css" />
+    <Content Include="FE\plugins\daterangepicker\daterangepicker.js" />
+    <Content Include="FE\plugins\fonts\all.min.css" />
+    <Content Include="FE\plugins\inputmask\jquery.inputmask.min.js" />
+    <Content Include="FE\plugins\jquery\jquery-ui.css" />
+    <Content Include="FE\plugins\jquery\jquery-ui.min.css" />
+    <Content Include="FE\plugins\jquery\jquery.knob.min.js" />
+    <Content Include="FE\plugins\jquery\jquery.min.js" />
+    <Content Include="FE\plugins\jqvmap\jquery.vmap.min.js" />
+    <Content Include="FE\plugins\jqvmap\jqvmap.min.css" />
+    <Content Include="FE\plugins\moment\moment.min.js" />
+    <Content Include="FE\plugins\overlayScrollbars\jquery.overlayScrollbars.min.js" />
+    <Content Include="FE\plugins\overlayScrollbars\OverlayScrollbars.min.css" />
+    <Content Include="FE\plugins\select\select2-bootstrap4.min.css" />
+    <Content Include="FE\plugins\select\select2.full.min.js" />
+    <Content Include="FE\plugins\select\select2.min.css" />
+    <Content Include="FE\plugins\select\select2.min.js" />
+    <Content Include="FE\plugins\sparklines\sparkline.js" />
+    <Content Include="FE\plugins\summernote\summernote-bs4.css" />
+    <Content Include="FE\plugins\summernote\summernote-bs4.min.js" />
+    <Content Include="FE\plugins\summernote\summernote.css" />
+    <Content Include="HandllingDept.aspx" />
+    <Content Include="LoginPage.aspx" />
+    <Content Include="PurchaseDept.aspx" />
+    <Content Include="PurchaseDeptAddInfo.aspx" />
+    <Content Include="SellDept.aspx" />
+    <Content Include="seller.aspx" />
+    <Content Include="SellerDeptAddInfo.aspx" />
+    <Content Include="styles.css" />
+    <Content Include="buyer.aspx" />
+    <Content Include="Users_admin.aspx" />
+    <Content Include="Users_info.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminControls.aspx.cs">
+      <DependentUpon>AdminControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminControls.aspx.designer.cs">
+      <DependentUpon>AdminControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HandllingDept.aspx.cs">
+      <DependentUpon>HandllingDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HandllingDept.aspx.designer.cs">
+      <DependentUpon>HandllingDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseDept.aspx.cs">
+      <DependentUpon>PurchaseDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseDept.aspx.designer.cs">
+      <DependentUpon>PurchaseDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseDeptAddInfo.aspx.cs">
+      <DependentUpon>PurchaseDeptAddInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PurchaseDeptAddInfo.aspx.designer.cs">
+      <DependentUpon>PurchaseDeptAddInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellDept.aspx.cs">
+      <DependentUpon>SellDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellDept.aspx.designer.cs">
+      <DependentUpon>SellDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="buyer.aspx.cs">
+      <DependentUpon>buyer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buyer.aspx.designer.cs">
+      <DependentUpon>buyer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seller.aspx.cs">
+      <DependentUpon>seller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seller.aspx.designer.cs">
+      <DependentUpon>seller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellerDeptAddInfo.aspx.cs">
+      <DependentUpon>SellerDeptAddInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellerDeptAddInfo.aspx.designer.cs">
+      <DependentUpon>SellerDeptAddInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users_admin.aspx.cs">
+      <DependentUpon>Users_admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users_admin.aspx.designer.cs">
+      <DependentUpon>Users_admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users_info.aspx.cs">
+      <DependentUpon>Users_info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users_info.aspx.designer.cs">
+      <DependentUpon>Users_info.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup Condition="$(VisualStudioVersion) == '16.0'">
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTPath)\Microsoft.Data.Tools.Schema.Sql.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTesting, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FE\plugins\NewFolder1\" />
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62804</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44369/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <PropertyGroup>
+    <SsdtUnitTestVersion>3.1</SsdtUnitTestVersion>
+  </PropertyGroup>
+  <Import Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="$(VisualStudioVersion) != '15.0' And '$(SQLDBExtensionsRefPath)' == ''" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

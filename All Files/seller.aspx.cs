@@ -1,0 +1,22 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace SGP_1._0
+{
+    public partial class seller : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (LoginPage.Role != 2 || LoginPage.Role != 4)
+            {
+              
+
+            }
+
+        }
+    }
+}
